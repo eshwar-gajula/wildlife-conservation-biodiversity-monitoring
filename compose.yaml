@@ -1,0 +1,12 @@
+services:
+  mongo:
+    image: mongo:8.0
+    container_name: wildlife-conservation-mongodb
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:27017:27017"
+    volumes:
+      - wildlife_mongo_data:/data/db
+
+volumes:
+  wildlife_mongo_data:

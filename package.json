@@ -1,0 +1,15 @@
+{
+  "name": "wildlife-conservation-platform",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "npm ci --prefix backend && npm ci --prefix frontend",
+    "db:up": "docker compose up -d mongo",
+    "db:down": "docker compose stop mongo",
+    "dev": "node scripts/dev.js",
+    "build": "npm run build --prefix frontend",
+    "lint": "npm run lint --prefix frontend",
+    "start:api": "npm run start --prefix backend"
+  }
+}
